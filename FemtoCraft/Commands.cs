@@ -306,7 +306,7 @@ namespace FemtoCraft {
 
         static void SayHandler( [NotNull] Player player, [CanBeNull] string message ) {
             if( !player.CheckIfOp() ) return;
-            if( message == null ) player.Message = "";
+            if( message == null ) player.Message = "You must enter a message!";
             Server.Players.Message( null, false, "&C" + message );
         }
 
