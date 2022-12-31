@@ -23,6 +23,11 @@ namespace FemtoCraft {
             Logger.LogCommand( "{0}: {1}", player.Name, message );
 
             switch( command ) {
+                case "help":
+                case "h":
+                    HelpHandler( player );
+                    break;
+          
                 case "ops":
                     OpsHandler( player );
                     break;
@@ -301,7 +306,7 @@ namespace FemtoCraft {
 
         static void SayHandler( [NotNull] Player player, [CanBeNull] string message ) {
             if( !player.CheckIfOp() ) return;
-            if( message == null ) message = "";
+            if( message == null ) player.Message = "You must enter a message!";
             Server.Players.Message( null, false, "&C" + message );
         }
 
@@ -565,6 +570,11 @@ namespace FemtoCraft {
             player.IsPainting = !player.IsPainting;
             player.Message( "Paint: {0}", player.IsPainting ? "ON" : "OFF" );
         }
+        
+          static void HelpHandler( [NotNull] Player player ) {
+            if( player.CheckIfConsole() ) return;
+            player.Message( "Commands usable by guest are: /tp, /p, /help, /players);
+        }
 
 
         public static void PlayersHandler( [NotNull] Player player ) {
@@ -573,6 +583,10 @@ namespace FemtoCraft {
             if( players.Length == 0 ) {
                 player.Message( "There are no players online." );
             } else {
+            if( players.Length == 1 ) {
+                player.Message( "There is one player online, it's you." );
+            } else {
+
                 string playerList;
                 if( player.IsOp || Config.RevealOps ) {
                     playerList = players.JoinToString( ", ", p => ( p.IsOp ? Config.OpColor : "&F" ) + p.Name );
