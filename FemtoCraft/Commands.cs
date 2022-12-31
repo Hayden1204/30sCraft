@@ -306,7 +306,7 @@ namespace FemtoCraft {
 
         static void SayHandler( [NotNull] Player player, [CanBeNull] string message ) {
             if( !player.CheckIfOp() ) return;
-            if( message == null ) message = "";
+            if( message == null ) player.Message = "";
             Server.Players.Message( null, false, "&C" + message );
         }
 
@@ -584,7 +584,7 @@ namespace FemtoCraft {
                 player.Message( "There are no players online." );
             } else {
             if( players.Length == 1 ) {
-                player.Message( "You are the only player online." );
+                player.Message( "There is one player online, it's you." );
             } else {
 
                 string playerList;
