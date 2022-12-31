@@ -307,7 +307,7 @@ namespace FemtoCraft {
 
 
         static void TeleportHandler( [NotNull] Player player, [CanBeNull] string targetName ) {
-            if( !player.CheckIfOp() || !player.CheckPlayerName( targetName ) ) return;
+            if( !player.CheckPlayerName( targetName ) ) return;
             if( player == Player.Console ) {
                 player.Message( "Can't teleport from console!" );
                 return;

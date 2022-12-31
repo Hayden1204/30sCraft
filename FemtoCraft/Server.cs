@@ -288,7 +288,7 @@ namespace FemtoCraft {
 
                 // Announce departure
                 if( player.HasBeenAnnounced ) {
-                    Players.Message( "Player {0} left the server.", player.Name );
+                    Players.Message( "{0} left the game", player.Name );
                 }
 
                 // Despawn player entity

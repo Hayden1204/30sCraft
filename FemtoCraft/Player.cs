@@ -291,7 +291,7 @@ namespace FemtoCraft {
 
             // announce player, and print MOTD
             Server.Players.Message( this, false,
-                                    "Player {0} connected.", Name );
+                                    "{0} joined the game", Name );
             HasBeenAnnounced = true;
             //Logger.Log( "Send: Message({0})", Config.MOTD );
             Message( Config.MOTD );
