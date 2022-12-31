@@ -13,7 +13,6 @@ A minimalistic Minecraft Classic server forked from FemtoCraft. It implements a 
 - Improved event logging.
 - Reduced memory and CPU use.
 - Supports email accounts and [Classic Protocol Extensions](http://wiki.vg/Classic_Protocol_Extension).
-- /help Command, to find the important things with ease.
 
 ## Changes from FemtoCraft
 
