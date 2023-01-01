@@ -68,6 +68,9 @@ namespace FemtoCraft {
                     GrassHandler( player );
                     break;
 
+		case "me":
+		    MeHandler( player, param );
+		    break;
                 case "say":
                 case "broadcast":
                     SayHandler( player, param );
@@ -296,6 +299,12 @@ namespace FemtoCraft {
             if( !player.CheckIfAllowed( Config.AllowGrassBlocks, Config.OpAllowGrassBlocks ) ) return;
             player.Message( player.PlaceGrass ? "Grass: OFF" : "Grass: ON" );
             player.PlaceGrass = !player.PlaceGrass;
+        }
+
+
+        static void MeHandler( [NotNull] Player player, [CanBeNull] string message ) {
+            if ( message == null ) message = "";
+            Server.Players.Message( null, false, "&F*" + player.Name + " " + message );
         }
 
 
