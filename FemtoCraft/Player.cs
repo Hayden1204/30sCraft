@@ -242,7 +242,7 @@ namespace FemtoCraft {
                 }
                 bool verified = sb.ToString().Equals( mppass, StringComparison.OrdinalIgnoreCase );
                 if( !verified ) {
-                    KickNow( "Could not verify player name." );
+                    KickNow( "Please logout and login again so you can be verified." );
                     Logger.LogWarning( "Player {0} from {1}: Could not verify name.",
                                        name, IP );
                     return false;
