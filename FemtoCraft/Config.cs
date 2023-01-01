@@ -6,7 +6,7 @@ using System.Net;
 namespace FemtoCraft {
     // ReSharper disable RedundantDefaultFieldInitializer
     static class Config {
-        public static string ServerName = "FemtoCraft Server";
+        public static string ServerName = "30sCraft Server";
         public static string MOTD = "Welcome to the server!";
         public static int Port = 25565;
         public static IPAddress IP = IPAddress.Any;
@@ -14,8 +14,8 @@ namespace FemtoCraft {
         public static bool Public = false;
         public static bool VerifyNames = true;
         public static bool UseWhitelist = false;
-        public static bool AdminSlot = true;
-        public static bool RevealOps = false;
+        public static bool AdminSlot = false;
+        public static bool RevealOps = true;
         public static bool AllowEmails = false;
         public static string HeartbeatUrl = "https://www.classicube.net/server/heartbeat/";
 
@@ -23,7 +23,7 @@ namespace FemtoCraft {
         public static bool LimitClickRate = true;
         public static bool LimitClickDistance = true;
         public static bool LimitChatRate = true;
-        public static bool AllowSpeedHack = false;
+        public static bool AllowSpeedHack = true;
 
         public static int OpMaxConnections = 3;
         public static bool OpLimitClickRate = true;
@@ -33,28 +33,28 @@ namespace FemtoCraft {
 
         public static int PhysicsTick = 50;
         public static bool Physics = true;
-        public static bool PhysicsFloodProtection = false;
+        public static bool PhysicsFloodProtection = true;
         public static bool PhysicsGrass = true;
         public static bool PhysicsLava = true;
         public static bool PhysicsPlants = true;
         public static bool PhysicsSand = true;
         public static bool PhysicsSnow = true;
-        public static bool PhysicsTrees = false;
+        public static bool PhysicsTrees = true;
         public static bool PhysicsWater = true;
 
-        public static bool AllowWaterBlocks = false;
-        public static bool AllowLavaBlocks = false;
-        public static bool AllowGrassBlocks = false;
+        public static bool AllowWaterBlocks = true;
+        public static bool AllowLavaBlocks = true;
+        public static bool AllowGrassBlocks = true;
         public static bool AllowSolidBlocks = false;
         public static bool OpAllowWaterBlocks = true;
         public static bool OpAllowLavaBlocks = true;
         public static bool OpAllowGrassBlocks = true;
         public static bool OpAllowSolidBlocks = true;
 
-        public static bool ProtocolExtension = true;
+        public static bool ProtocolExtension = false;
         // ReSharper restore RedundantDefaultFieldInitializer
 
-        public const string OpColor = "&3";
+        public const string OpColor = "&C";
 
         const string ConfigFileName = "server.properties";
 
