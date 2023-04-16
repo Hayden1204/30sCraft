@@ -304,7 +304,7 @@ namespace FemtoCraft {
 
         static void MeHandler( [NotNull] Player player, [CanBeNull] string message ) {
             if ( message == null ) message = "";
-            Server.Players.Message( null, false, "&F*" + player.Name + " " + message );
+            Server.Players.Message( null, false, "&7*" + player.Name + " " + message );
         }
 
 

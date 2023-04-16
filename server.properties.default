@@ -37,8 +37,8 @@ physics-snow=True
 physics-trees=True
 physics-water=True
 
-allow-water-blocks=True
-allow-lava-blocks=True
+allow-water-blocks=False
+allow-lava-blocks=False
 allow-grass-blocks=True
 allow-solid-blocks=False
 op-allow-water-blocks=True

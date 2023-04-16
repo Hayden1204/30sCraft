@@ -26,7 +26,7 @@ namespace FemtoCraft {
             while( true ) {
                 try {
                     string requestUri =
-                        String.Format( "{0}?public={1}&max={2}&users={3}&port={4}&version=7&salt={5}&name={6}",
+                        String.Format( "{0}?public={1}&max={2}&users={3}&port={4}&version=7&salt={5}&name={6}&server=30sCraft",
                                        Config.HeartbeatUrl,
                                        Config.Public,
                                        Config.MaxPlayers,

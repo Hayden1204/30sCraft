@@ -42,8 +42,8 @@ namespace FemtoCraft {
         public static bool PhysicsTrees = true;
         public static bool PhysicsWater = true;
 
-        public static bool AllowWaterBlocks = true;
-        public static bool AllowLavaBlocks = true;
+        public static bool AllowWaterBlocks = false;
+        public static bool AllowLavaBlocks = false;
         public static bool AllowGrassBlocks = true;
         public static bool AllowSolidBlocks = false;
         public static bool OpAllowWaterBlocks = true;
